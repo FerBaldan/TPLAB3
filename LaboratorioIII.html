@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title >Formulario</title>
+	<link rel="icon" type="image/png" href="kite.png">
+	<style >
+
+		td
+	    {
+	        border: 1px solid black;        
+
+        }
+        tr
+        {
+        	text-align: center;
+        }
+
+		h1
+		{   
+			margin: 0px;
+			padding: 0px;
+			text-align: center;
+			background-color: black ;
+			color: white;
+		}
+		
+        img
+        {
+        	width: 300px;
+        }
+        
+        div#pre
+        {
+        	border: 2px black solid;
+        	margin: 5px;
+        }
+
+         #barra 
+         {
+                
+				margin:auto;
+				width:300px;
+		}
+		ul
+		{
+
+			padding: 0px;
+			margin: 0px;
+			list-style: none;
+		}
+		
+
+        .menu li a 
+        {      
+				background-color:#000;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+		}
+		.menu  li 
+		{
+				float:left;
+		}
+		.menu li a:hover
+		{
+				background-color:#656565;
+		}	
+		.menu li ul
+		{
+			position:absolute;
+			display: none;
+
+		}
+		.menu li:hover ul
+		{    
+			width: 700px;
+			display: block;
+		}	         
+        
+        h4
+        {       	
+        	padding: 0px;
+			margin: 0px;
+        	float: left;
+
+        	width: 200px;
+        }
+        h3,h2
+        {
+        	padding: 10px;
+        	margin: 10px;
+        }
+        #abejas
+        {
+        	text-align: center;
+        }
+        #cuestionario
+        {
+        	margin: 1px;
+        	background-image: url("celda.jpg");
+        }
+        #cuest
+        {
+        text-align: center;
+			background-color: green ;
+			color: white;	
+        }
+        .correctas
+        {
+
+        	color: green;
+        	
+        }
+        .incorrectas
+        {
+        	color: red;
+        	
+        }
+        .preguntas
+        {
+        	margin: 50px;
+        }
+        #bot
+        {
+            margin: 0px;
+        	text-align: center;
+        }
+        #boton1
+        {
+        	color: green;
+        }
+        #botonterminar
+        {
+        	text-align: center;
+        }
+        
+	</style>
+</head>
+<body>
+<div id="pre">  
+ <div style="text-align: right;"><img alt=""  src="utn.png" ></div>
+   <h1>Trabajo Practico Laboratorio III</h1> 
+    <h2>Consigna:</h2>
+     <h3>Se pide armar una página web que permita evaluar el conocimiento del usuario sobre algún
+tema. Dicho tema es de elección libre.
+Se le presentará al usuario un “cuestionario”, que deberá completar, y luego de presionar un
+botón (para finalizar) se le mostrará cuántos puntos obtuvo con sus respuestas. Además se
+debe indicar, de alguna forma, cuáles fueron respondidas correcta e incorrectamente. <input type="button" id="boton1" value="Continuar con el Cuestionario" onclick="apa()"> Buena suerte!!!
+</h3> 
+  
+    
+ </div>	
+<div id="barra">
+	<ul class="menu">
+	    <li><a href="">Info del TP</a> 
+	    	<ul>
+	    		<li><a href="TPintegrador.pdf">Descargar PDF</a></li>
+	    	</ul>
+	    </li>
+	    <li><a href="">Profesor</a>  
+	        <ul>
+	    	   <li><a href="">Mauro Gullino </a>
+	    	   	    <a href="https://www.youtube.com/channel/UCZoMnU3I_kEqRmPnt6-z_MQ">Canal de Youtube</a>
+	    	   </li>
+
+	    	</ul>  
+	    </li>
+	    	  
+	       
+	    <li><a href="">Alumno</a> 
+	    	<ul>
+	    		<li><a href="">Fernando Baldan</a>
+	    			<a href="">GitHub</a></li>
+
+	    	</ul>
+	    </li>
+
+	</ul>
+
+</div> 
+
+
+
+<div id="cuestionario">
+	
+	<h1 id="cuest">Inicio del cuestionario</h1>
+	<h3 id="abejas">Cuestionarios sobre abejas:</h3>
+	<div class="preguntas">
+	    <h4>¿Cuántas flores visitan las   abejas de miel por día?</h4>
+	       <label > 1000 </label><input type="radio" name="dias"  value="1000" id="1000">
+	       <label > 100 </label><input type="radio" name="dias"  value="100" id="100">
+	       <label >10</label><input type="radio" value="10" name="dias" id="10"><h4 class="correctas" id="corr1">Correcta</h4><h4 class="incorrectas" id="inc1">Incorrecta</h4>
+	       
+	       
+	       
+	</div>
+	<div class="preguntas">
+		<h4>Quien fecunda a la reina?</h4>
+		<input type="text"  id="reina">
+		<h4 id="corr2" class="correctas" >Correcta </h4><h4 id="inc2" class="incorrectas">Incorrecta</h4>
+	</div>
+	<div class="preguntas">
+		<h4>¿Aproximadamente cuántas abejas viven en una colonia?</h4>	
+		<select id="cantidad">
+			<option value="">haga una seleccion</option>
+			<option value="1">50.000</option>
+			<option value="2">10.000</option>
+			<option value="3">100.000</option>			
+		</select>
+		<h4 class="correctas" id="corr3">Correcta</h4><h4 class="incorrectas" id="inc3">Incorrecta</h4>    
+    </div>
+    <div class="preguntas">
+    	<h4>En que mes y año se realizo apimondia en Argentina?</h4>
+    	<input type="month"  id="mes"> 
+    	<h4 class="correctas" id="corr4">Correcta</h4><h4 class="incorrectas" id="inc4">Incorrecta</h4>    
+    </div>  
+
+    <div class="preguntas">
+    	<h4>Cuantos años dura aproximadamente una reina?</h4>
+    	<input type="number"  id="rango"> 
+    	<h4 class="correctas" id="corr5">Correcta</h4><h4 class="incorrectas" id="inc5">Incorrecta</h4> 
+    </div>
+	   <div id="botonterminar"><input type="button" id="boton" value="Terminar el cuestionario"></div>
+</div>
+<div>
+	<table id="cuadro">
+
+  <tr>
+
+    <th></th>
+
+    <th>CORRECTAS</th>
+
+    <th>INCORRECTAS</th>
+
+     <th>PUNTOS TOTALES</th>
+
+  </tr>
+
+  <tr>
+
+    <td>PREGUNTAS</td>
+
+    <td id="c"></td>
+
+    <td id="i"></td>
+
+    <td id="p"></td>
+
+
+  </tr>
+</table>
+</div>
+
+
+
+<script>
+	  cuadro.style.display="none";
+      cuestionario.style.display="none";
+	  inc1.style.display="none";
+	  corr1.style.display="none";
+	  corr2.style.display="none";
+	  inc2.style.display="none";
+	  corr3.style.display="none";
+	  inc3.style.display="none";
+	  corr4.style.display="none";
+	  inc4.style.display="none";
+	  corr5.style.display="none";
+	  inc5.style.display="none";
+      function apa(){barra.style.display ="none";pre.style.display = "none";boton1.style.display="none";cuestionario.style.display="block"}
+      
+	 document.getElementById("boton").onclick= function prueba(){
+       var nombre=document.getElementById("reina").value;
+       var b = document.getElementById("1000").checked;
+       var c =document.getElementById("cantidad").value;
+       var d = document.getElementById("mes").value;
+        var e = document.getElementById("rango").value;
+       var cont=0;
+       var preg=0;
+
+   
+       if(c == 1 )
+       {
+       	    
+			corr3.style.display="block";
+			cont+=20;
+			preg++;
+		}
+		else
+			inc3.style.display="block"
+			
+         if(b == true)
+        {
+        	  corr1.style.display="block";
+        	  cont+=20;
+        	  preg++;
+        }
+          else
+         	  inc1.style.display="block";
+        
+		
+		if(nombre=="zangano"||nombre=="ZANGANO")
+		{
+			 corr2.style.display="block";
+			 cont+=20;
+			 preg++;
+		}
+		else
+			 inc2.style.display="block";
+		
+       
+		if(d == "2011-09")
+		{
+		
+			corr4.style.display="block";
+			cont+=20;
+			preg++;
+		}
+		else	
+			inc4.style.display="block";
+
+		if(e==3)
+		{
+			corr5.style.display="block"
+			cont+=20;
+			preg++;
+			
+		}
+		else
+			inc5.style.display="block";
+		
+
+		if(cont>=60)
+		{
+			alert ("Su Puntaje fue de "+cont+"/100 Usted Aprobo");
+		}
+        else
+        	alert("Su puntaje fue de "+cont+"/100 Usted Desaprobo");
+        document.getElementById("c").innerHTML = preg ;
+        document.getElementById("i").innerHTML = 5-preg;
+        document.getElementById("p").innerHTML = cont;
+
+        cuadro.style.display="block";
+		
+	}
+     
+	   
+</script>
+</body>
+</html>
